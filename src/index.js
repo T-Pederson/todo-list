@@ -1,6 +1,7 @@
 import './styles.css';
 import checklistSVG from "./images/checklist.svg";
 import addSVG from "./images/add.svg";
+import { checkbox } from "./checkbox";
 
 // Load svgs
 const h1 = document.querySelector("h1");
@@ -21,3 +22,8 @@ addImg.setAttribute("src", addSVG);
 addImg.setAttribute("alt", "Add");
 addImg.classList.add("add");
 document.querySelector(".content").appendChild(addImg);
+
+// Make checkboxes work
+for (let box of document.querySelectorAll(".checkbox")) {
+  box.addEventListener("click", checkbox);
+}

@@ -144,3 +144,9 @@ h1 {
 .complete {
   filter: opacity(.5);
 }
+
+.selected {
+  color: black;
+  scale: 105%;
+  padding-left: 8px;
+}
