@@ -9,6 +9,7 @@
   font-size: 1em;
   font-weight: 400;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  color: #555;
 }
 
 body {
@@ -21,28 +22,125 @@ body {
 .header {
   background-color: #38bdf8;
   grid-column: 1 / 3;
-  display: grid;
-  grid-template: 100% / 50% 50%;
-}
-
-.header-left,
-.header-right {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0 16px;
+  padding-left: 4px;
 }
 
-.header-right {
-  justify-content: end;
+.logo {
+  height: 36px;
 }
 
-.header-left img,
-.header-right img {
-  height: 24px;
-  cursor: pointer;
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
 }
 
 .navbar {
   background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.home,
+.week,
+.month,
+.project,
+.add,
+.edit,
+.delete,
+.checkbox {
+  cursor: pointer;
+}
+
+.home:hover,
+.week:hover,
+.month:hover,
+.project:hover {
+  color: black;
+  scale: 105%;
+  padding-left: 8px;
+}
+
+.add,
+.edit,
+.delete,
+.checkbox {
+  height: 24px;
+  width: 24px;
+}
+
+.add:hover,
+.edit:hover,
+.delete:hover,
+.checkbox:hover {
+  color: black;
+  filter: brightness(0%);
+}
+
+.projects {
+  padding-top: 12px;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  gap: 8px;
+}
+
+.project {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: scroll;
+}
+
+.todo {
+  padding: 8px;
+  border-radius: 8px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  min-width: 225px;
+}
+
+.low {
+  background-color: rgba(0, 255, 0, 0.6);
+}
+
+.medium {
+  background-color: rgba(255, 255, 0, 0.75);
+}
+
+.high {
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+.dueContainer,
+.priorityContainer {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto;
+  gap: 6px;
+}
+
+.checkbox {
+  justify-self: end;
+}
+
+.complete {
+  filter: opacity(.5);
 }

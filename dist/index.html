@@ -9,20 +9,64 @@
 </head>
 <body>
   <div class="header">
-    <div class="header-left">
-      <input type="search" name="search" id="search" autocomplete="off">
-    </div>
-    <div class="header-right">
-
-    </div>
+    <h1>Todo List</h1>
   </div>
 
   <div class="navbar">
-
+    <p class="home">Home</p>
+    <p class="week">Week</p>
+    <p class="month">Month</p>
+    <p class="projects">Projects</p>
+    <div class="projectsContainer">
+      <p class="project">Example</p>
+    </div>
   </div>
 
   <div class="content">
+    <div class="todo low">
+      <p class="title">Take out the garbage</p>
+      <div class="dueContainer">
+        <p>Due: </p>
+        <p class="duedate">11/01/22</p>
+      </div>
+      <div class="priorityContainer">
+        <p>Priority: </p>
+        <p class="pirority">Low</p>
+        <img src="../src/images/checkboxempty.svg" alt="checkbox" class="checkbox">
+        <img src="../src/images/edit.svg" alt="edit" class="edit">
+        <img src="../src/images/delete.svg" alt="delete" class="delete">
+      </div>
+    </div>
 
+    <div class="todo medium complete">
+      <p class="title">Grocery shopping</p>
+      <div class="dueContainer">
+        <p>Due: </p>
+        <p class="duedate">11/02/22</p>
+      </div>
+      <div class="priorityContainer">
+        <p>Priority: </p>
+        <p class="pirority">Medium</p>
+        <img src="../src/images/checkboxchecked.svg" alt="checkbox" class="checkbox">
+        <img src="../src/images/edit.svg" alt="edit" class="edit">
+        <img src="../src/images/delete.svg" alt="delete" class="delete">
+      </div>
+    </div>
+
+    <div class="todo high">
+      <p class="title">Take a shower</p>
+      <div class="dueContainer">
+        <p>Due: </p>
+        <p class="duedate">10/31/22</p>
+      </div>
+      <div class="priorityContainer">
+        <p>Priority: </p>
+        <p class="pirority">High</p>
+        <img src="../src/images/checkboxempty.svg" alt="checkbox" class="checkbox">
+        <img src="../src/images/edit.svg" alt="edit" class="edit">
+        <img src="../src/images/delete.svg" alt="delete" class="delete">
+      </div>
+    </div>
   </div>
 </body>
 </html>

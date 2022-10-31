@@ -1,35 +1,23 @@
 import './styles.css';
-import addSVG from './images/add.svg';
-import helpSVG from './images/help.svg';
-import homeSVG from './images/home.svg';
-import menuSVG from './images/menu.svg';
-import notificationsSVG from './images/notifications.svg';
+import checklistSVG from "./images/checklist.svg";
+import addSVG from "./images/add.svg";
 
-const headerLeft = document.querySelector('.header-left');
-const headerRight = document.querySelector('.header-right');
-const searchBar = document.getElementById('search');
+// Load svgs
+const h1 = document.querySelector("h1");
+const checklistImg = document.createElement("img");
+checklistImg.setAttribute("src", checklistSVG);
+checklistImg.setAttribute("alt", "checklist icon");
+checklistImg.classList.add("logo");
+document.querySelector(".header").insertBefore(checklistImg, h1);
 
-const menuIcon = document.createElement('img');
-menuIcon.setAttribute('src', menuSVG);
-menuIcon.setAttribute('alt', 'menu');
-headerLeft.insertBefore(menuIcon, searchBar);
+let addImg = document.createElement("img");
+addImg.setAttribute("src", addSVG);
+addImg.setAttribute("alt", "Add");
+addImg.classList.add("add");
+document.querySelector(".projectsContainer").appendChild(addImg);
 
-const homeIcon = document.createElement('img');
-homeIcon.setAttribute('src', homeSVG);
-homeIcon.setAttribute('alt', 'home');
-headerLeft.insertBefore(homeIcon, searchBar);
-
-const addIcon = document.createElement('img');
-addIcon.setAttribute('src', addSVG);
-addIcon.setAttribute('alt', 'add');
-headerRight.appendChild(addIcon);
-
-const helpIcon = document.createElement('img');
-helpIcon.setAttribute('src', helpSVG);
-helpIcon.setAttribute('alt', 'help');
-headerRight.appendChild(helpIcon);
-
-const notificationsIcon = document.createElement('img');
-notificationsIcon.setAttribute('src', notificationsSVG);
-notificationsIcon.setAttribute('alt', 'notifications');
-headerRight.appendChild(notificationsIcon);
+addImg = document.createElement("img");
+addImg.setAttribute("src", addSVG);
+addImg.setAttribute("alt", "Add");
+addImg.classList.add("add");
+document.querySelector(".content").appendChild(addImg);
