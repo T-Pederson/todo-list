@@ -48,6 +48,10 @@ h1 {
   font-weight: bold;
 }
 
+.navbar * {
+  width: fit-content;
+}
+
 .home,
 .week,
 .month,
@@ -65,7 +69,7 @@ h1 {
 .project:hover {
   color: black;
   scale: 105%;
-  padding-left: 8px;
+  padding-left: 4px;
 }
 
 .add,
@@ -79,7 +83,8 @@ h1 {
 .add:hover,
 .edit:hover,
 .delete:hover,
-.checkbox:hover {
+.checkbox:hover,
+.newProject:hover {
   color: black;
   filter: brightness(0%);
 }
@@ -107,6 +112,14 @@ h1 {
   flex-direction: column;
   gap: 10px;
   overflow: scroll;
+}
+
+.newProject {
+  display: flex;
+  font-size: .8em;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
 }
 
 .todo {
@@ -148,5 +161,5 @@ h1 {
 .selected {
   color: black;
   scale: 105%;
-  padding-left: 8px;
+  padding-left: 4px;
 }
