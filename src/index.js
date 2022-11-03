@@ -2,7 +2,7 @@ import './styles.css';
 import { loadSVGs } from './load-SVGs';
 import { todoFactory } from './todo-factory';
 import { projectFactory } from './project-factory';
-import { populateHome } from './home';
+import { populateHome } from './home-view';
 import { populateProjects } from './populate-projects';
 
 let projects = [];
@@ -15,6 +15,12 @@ let projects = [];
     todoFactory("Take a shower", "11/01/22", "High")
   ]);
   projects.push(exampleProject);
+  let exampleProject2 = projectFactory ('Example2', [
+    todoFactory("Fix the sink", "11/01/22", "Low"),
+    todoFactory("Take kids to school", "11/02/22", "Medium"),
+    todoFactory("Brush teeth", "11/01/22", "High")
+  ]);
+  projects.push(exampleProject2);
 // else
   // generate projects from storage
     // generate todos for each project in storage

@@ -12,5 +12,5 @@ export function loadSVGs () {
   addImg.setAttribute("src", addSVG);
   addImg.setAttribute("alt", "Add");
   addImg.classList.add("add");
-  document.querySelector(".projectsContainer").appendChild(addImg);
+  document.querySelector(".navbar").appendChild(addImg);
 }
