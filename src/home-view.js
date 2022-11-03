@@ -1,4 +1,3 @@
-import { clearContent } from './clear-content';
 import { displayTodo } from './display-todo';
 import { projects } from './index';
 
