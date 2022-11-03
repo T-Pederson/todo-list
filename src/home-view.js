@@ -1,10 +1,8 @@
 import { clearContent } from './clear-content';
 import { displayTodo } from './display-todo';
+import { projects } from './index';
 
-export function populateHome (projects) {
-  // Clear content area
-  clearContent();
-
+export function populateHome () {
   // Display all todo items in content area
   for (let project of projects) {
     for (let todo of project.todoList) {

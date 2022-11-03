@@ -1,7 +1,11 @@
+import { clearProjects } from "./clear-projects";
 import { deleteProject } from "./delete-project";
 import deleteSVG from "./images/delete.svg";
+import { projects } from "./index";
 
-export function populateProjects (projects) {
+export function populateProjects () {
+  clearProjects();
+  
   const projectsContainer = document.querySelector(".projectsContainer");
   for (let project of projects) {
     let projectNode = document.createElement("div");
@@ -14,7 +18,7 @@ export function populateProjects (projects) {
     deleteIcon.setAttribute("src", deleteSVG);
     deleteIcon.setAttribute("alt", "delete");
     deleteIcon.classList.add("delete");
-    deleteIcon.addEventListener("click", () => deleteProject(projectNode, projects));
+    deleteIcon.addEventListener("click", () => deleteProject(projectNode));
     projectNode.appendChild(deleteIcon);
   }
 }

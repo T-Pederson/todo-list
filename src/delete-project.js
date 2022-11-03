@@ -1,8 +1,8 @@
-import { clearProjects } from "./clear-projects";
-import { populateHome } from "./home-view";
 import { populateProjects } from "./populate-projects";
+import { projects } from "./index";
+import { populateSelection } from "./populate-selection";
 
-export function deleteProject (project, projects) {
+export function deleteProject (project) {
   
   // Delete project from list of projects
   for (let projectIndex in projects) {
@@ -12,8 +12,7 @@ export function deleteProject (project, projects) {
   }
 
   // Update projects list in navbar
-  clearProjects();
   populateProjects(projects);
-  populateHome(projects);
+  populateSelection();
 }
 

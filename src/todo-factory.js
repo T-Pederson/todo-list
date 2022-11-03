@@ -1,3 +1,3 @@
-export const todoFactory = (title, dueDate, priority) => {
-  return {title, dueDate, priority};
+export const todoFactory = (title, dueDate, priority, project) => {
+  return {title, dueDate, priority, project};
 }

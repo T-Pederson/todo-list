@@ -2,6 +2,7 @@ import checkboxEmptySVG from "./images/checkboxempty.svg";
 import editSVG from "./images/edit.svg";
 import deleteSVG from "./images/delete.svg"
 import { changeCheckbox } from "./change-checkbox";
+import { deleteTodo } from "./delete-todo";
 
 const content = document.querySelector(".content");
 
@@ -10,6 +11,7 @@ export function displayTodo (todo) {
   let todoNode = document.createElement("div");
   todoNode.classList.add("todo");
   todoNode.classList.add(todo.priority.toLowerCase());
+  todoNode.classList.add(todo.project);
   content.appendChild(todoNode);
 
   // Generate title
@@ -68,5 +70,6 @@ export function displayTodo (todo) {
   deleteIcon.setAttribute("src", deleteSVG);
   deleteIcon.setAttribute("alt", "delete");
   deleteIcon.classList.add("delete");
+  deleteIcon.addEventListener("click", () => deleteTodo(todo));
   priorityContainer.appendChild(deleteIcon);
 }
