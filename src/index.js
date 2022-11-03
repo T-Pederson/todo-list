@@ -4,6 +4,7 @@ import { todoFactory } from './todo-factory';
 import { projectFactory } from './project-factory';
 import { populateProjects } from './populate-projects';
 import { populateSelection } from './populate-selection';
+import { homeView } from './home-view';
 
 export let projects = [];
 
@@ -33,8 +34,10 @@ export let projects = [];
   // Generate header logo and new project icon in navbar
   loadSVGs();
 
-  // Generate list of todos (home view by default)
-  populateSelection();
+  // Generate the initial list of todos using home view as default
+  homeView();
 
   // Add event listeners to Home, Week, and Month (each project will create it's own event listener when created in the navbar)
-  document.querySelector(".home").addEventListener("click", () => populateHome());
+  document.querySelector(".home").addEventListener("click", populateSelection);
+  document.querySelector(".week").addEventListener("click", populateSelection);
+  document.querySelector(".month").addEventListener("click", populateSelection);

@@ -1,4 +1,3 @@
-import { clearContent } from "./clear-content";
 import { projects } from "./index";
 import { populateSelection } from "./populate-selection";
 

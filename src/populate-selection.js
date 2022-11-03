@@ -1,35 +1,36 @@
 import { clearContent } from "./clear-content";
-import { populateHome } from "./home-view";
+import { homeView } from "./home-view";
+import { projectView } from "./project-view";
 
 // Generate list of todo's based on current navbar selection
-export function populateSelection () {
+export function populateSelection (selection) {
   clearContent();
   
   const navbar = document.querySelector(".navbar");
   const projectsList = document.querySelector(".projectsContainer");
   const navbarArray = Array.from(navbar.children);
   const projectsArray = Array.from(projectsList.children);
-  let selection;
+  selection = selection.target;
 
+  // Remove selected status from previous selection
   for (let item in navbarArray) {
     if (navbarArray[item].classList.contains("selected")) {
-      selection = navbarArray[item].innerText;
+      navbarArray[item].classList.remove("selected");
     }
   }
-
   for (let item in projectsArray) {
-    if (projectsArray[item].classList.contains("selected")) {
-      selection = projectsArray[item].innerText;
+    if (projectsArray[item].firstChild.classList.contains("selected")) {
+      projectsArray[item].firstChild.classList.remove("selected");
     }
   }
 
-  if (selection == 'Home') {
-    populateHome();
-  } else if (selection == 'Week') {
+  if (selection.innerText == 'Home') {
+    homeView();
+  } else if (selection.innerText == 'Week') {
     // display week view
-  } else if (selection == 'Month') {
+  } else if (selection.innerText == 'Month') {
     // display month view
   } else {
-    // display selected project view
+    projectView(selection);
   }
 }
