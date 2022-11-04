@@ -4,7 +4,6 @@ import { todoFactory } from './todo-factory';
 import { projectFactory } from './project-factory';
 import { populateProjects } from './populate-projects';
 import { populateSelection } from './populate-selection';
-import { homeView } from './home-view';
 import { newTodo } from './new-todo';
 
 export let projects = [];
