@@ -3,12 +3,14 @@ import { displayTodo } from "./display-todo";
 import addSVG from './images/add.svg';
 import deleteSVG from './images/delete.svg';
 import { deleteProject } from './delete-project';
+import { displayModal } from "./display-modal";
+import { removeProjectDelete } from "./remove-project-delete";
 
 
 // Display all todos for the currently selected project
 export function projectView (selected) {  
+  // Find the index of the project that is selected in the navbar
   let selectedProjectIndex;
-  
   for (let projectIndex in projects) {
     if (projects[projectIndex].title == selected.innerText) {
       selectedProjectIndex = projectIndex;
@@ -25,17 +27,12 @@ export function projectView (selected) {
   addImg.setAttribute("src", addSVG);
   addImg.setAttribute("alt", "Add Todo");
   addImg.classList.add("add");
+  addImg.classList.add("newTodo");
+  addImg.addEventListener("click", displayModal);
+  document.querySelector(".content").appendChild(addImg);
 
   // Delete any existing project delete button to avoid double ups
-  const projectsList = Array.from(document.querySelector(".projectsContainer").childNodes);
-  for (let projectIndex in projectsList) {
-    let projectNodes = Array.from(projectsList[projectIndex].children);
-    for (let nodeIndex in projectNodes) {
-      if (projectNodes[nodeIndex].classList.contains("delete")) {
-        projectNodes[nodeIndex].remove();
-      }
-    }
-  }
+  removeProjectDelete();
 
   // Display a delete button next to project name
   let deleteIcon = document.createElement("img");
@@ -44,9 +41,6 @@ export function projectView (selected) {
   deleteIcon.classList.add("delete");
   deleteIcon.addEventListener("click", deleteProject);
   selected.parentNode.appendChild(deleteIcon);
-
-  // addImg.addEventListener("click", newTodo);
-  document.querySelector(".content").appendChild(addImg);
   
   // Add selected class to selection
   selected.classList.add("selected");

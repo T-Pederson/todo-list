@@ -5,6 +5,7 @@ import { projectFactory } from './project-factory';
 import { populateProjects } from './populate-projects';
 import { populateSelection } from './populate-selection';
 import { homeView } from './home-view';
+import { newTodo } from './new-todo';
 
 export let projects = [];
 
@@ -35,9 +36,12 @@ export let projects = [];
   loadSVGs();
 
   // Generate the initial list of todos using home view as default
-  homeView();
+  populateSelection();
 
   // Add event listeners to Home, Week, and Month (each project will create it's own event listener when created in the navbar)
   document.querySelector(".home").addEventListener("click", populateSelection);
   document.querySelector(".week").addEventListener("click", populateSelection);
   document.querySelector(".month").addEventListener("click", populateSelection);
+
+  // Add event listener to add todo button in modal
+  document.querySelector(".addTodo").addEventListener("click", newTodo);

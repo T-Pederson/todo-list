@@ -29,7 +29,7 @@ export function populateSelection (selection) {
     selection = selection.target;
   }
 
-  // Remove selected status from previous selection if a new selection is picked
+  // Remove selected status from previous selection
   for (let item in navbarArray) {
     if (navbarArray[item].classList.contains("selected")) {
       navbarArray[item].classList.remove("selected");

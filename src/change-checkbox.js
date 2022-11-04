@@ -4,7 +4,7 @@ import checkboxCheckedSVG from "./images/checkboxchecked.svg";
 export function changeCheckbox (selected) {
   let todoClasses = selected.target.parentNode.parentNode.classList;
 
-  // Logic to swap checked status on todo item
+  // Swap checked status and checkbox icon on todo item
   if (Array.from(todoClasses).includes("complete")) {
     todoClasses.remove("complete");
     const newBox = document.createElement("img");
