@@ -1,6 +1,8 @@
 import { clearContent } from "./clear-content";
 import { homeView } from "./home-view";
 import { projectView } from "./project-view";
+import { weekView } from "./week-view";
+import { monthView } from "./month-view";
 
 // Generate list of todo's based on current navbar selection
 export function populateSelection (selection) {
@@ -11,7 +13,7 @@ export function populateSelection (selection) {
   const navbarArray = Array.from(navbar.children);
   const projectsArray = Array.from(projectsList.children);
 
-  // Find currently selected option in the event that a project or todo is deleted/edited
+  // Find currently selected option in the event that a project or todo is deleted
   if (selection == undefined) {
     for (let item in navbarArray) {
       if (navbarArray[item].classList.contains("selected")) {
@@ -23,7 +25,7 @@ export function populateSelection (selection) {
         selection = projectsArray[item].firstChild;
       }
     }
-  } else {
+  } else if (selection.target != undefined) {
     selection = selection.target;
   }
 
@@ -43,9 +45,9 @@ export function populateSelection (selection) {
   if (selection.innerText == 'Home') {
     homeView();
   } else if (selection.innerText == 'Week') {
-    // display week view
+    weekView();
   } else if (selection.innerText == 'Month') {
-    // display month view
+    monthView();
   } else {
     projectView(selection);
   }

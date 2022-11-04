@@ -11,7 +11,6 @@ export function displayTodo (todo) {
   let todoNode = document.createElement("div");
   todoNode.classList.add("todo");
   todoNode.classList.add(todo.priority.toLowerCase());
-  todoNode.classList.add(todo.project);
   content.appendChild(todoNode);
 
   // Generate title

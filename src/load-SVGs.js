@@ -11,7 +11,7 @@ export function loadSVGs () {
 
   let addImg = document.createElement("img");
   addImg.setAttribute("src", addSVG);
-  addImg.setAttribute("alt", "Add");
+  addImg.setAttribute("alt", "Add Project");
   addImg.classList.add("add");
   addImg.addEventListener("click", newProject);
   document.querySelector(".navbar").appendChild(addImg);

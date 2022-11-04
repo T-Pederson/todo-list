@@ -12,7 +12,7 @@ export function deleteProject (project) {
   }
 
   // Update projects list in navbar
-  populateProjects(projects);
-  populateSelection();
+  populateSelection(document.querySelector(".home"));
+  populateProjects();
 }
 
