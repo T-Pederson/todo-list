@@ -6,7 +6,7 @@ export function deleteProject (project) {
   
   // Delete project from list of projects
   for (let projectIndex in projects) {
-    if (projects[projectIndex].title == project.innerText) {
+    if (projects[projectIndex].title == project.target.previousSibling.innerText) {
       projects.splice(projectIndex, 1);
     }
   }

@@ -23,12 +23,11 @@ export function newProject () {
   // Don't allow user to use a blank or already existing title
   titleInput.addEventListener("keydown", (key) => {
     if (key.code == 'Enter') {
-      if (titleInput.value != '') {
-        if (!projectsArray.includes(titleInput.value)) {
-          const newProject = projectFactory(titleInput.value, []);
-          projects.push(newProject);
-          populateProjects();
-        }
+      let projectTitle = titleInput.value;
+      if (projectTitle != '' && !projectsArray.includes(projectTitle)) {
+        const newProject = projectFactory(projectTitle, []);
+        projects.push(newProject);
+        populateProjects();
       }
     }
   });

@@ -58,14 +58,14 @@ export function displayTodo (todo) {
   priorityContainer.appendChild(checkboxIcon);
   checkboxIcon.addEventListener("click", changeCheckbox);
 
-  // Generate edit
+  // Generate edit icon
   let editIcon = document.createElement("img");
   editIcon.setAttribute("src", editSVG);
   editIcon.setAttribute("alt", "edit");
   editIcon.classList.add("edit");
   priorityContainer.appendChild(editIcon);
 
-  // Generate delete
+  // Generate delete icon
   let deleteIcon = document.createElement("img");
   deleteIcon.setAttribute("src", deleteSVG);
   deleteIcon.setAttribute("alt", "delete");

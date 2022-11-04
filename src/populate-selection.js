@@ -10,9 +10,24 @@ export function populateSelection (selection) {
   const projectsList = document.querySelector(".projectsContainer");
   const navbarArray = Array.from(navbar.children);
   const projectsArray = Array.from(projectsList.children);
-  selection = selection.target;
 
-  // Remove selected status from previous selection
+  // Find currently selected option in the event that a project or todo is deleted/edited
+  if (selection == undefined) {
+    for (let item in navbarArray) {
+      if (navbarArray[item].classList.contains("selected")) {
+        selection = navbarArray[item];
+      }
+    }
+    for (let item in projectsArray) {
+      if (projectsArray[item].firstChild.classList.contains("selected")) {
+        selection = projectsArray[item].firstChild;
+      }
+    }
+  } else {
+    selection = selection.target;
+  }
+
+  // Remove selected status from previous selection if a new selection is picked
   for (let item in navbarArray) {
     if (navbarArray[item].classList.contains("selected")) {
       navbarArray[item].classList.remove("selected");
@@ -24,6 +39,7 @@ export function populateSelection (selection) {
     }
   }
 
+  // Display the appropriate view based on the selection
   if (selection.innerText == 'Home') {
     homeView();
   } else if (selection.innerText == 'Week') {

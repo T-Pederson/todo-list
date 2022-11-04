@@ -16,10 +16,10 @@ export let projects = [];
     todoFactory("Take a shower", "11/01/22", "High", "Example")
   ]);
   projects.push(exampleProject);
-  let exampleProject2 = projectFactory ('Example2', [
-    todoFactory("Fix the sink", "11/01/22", "Low", "Example2"),
-    todoFactory("Take kids to school", "11/02/22", "Medium", "Example2"),
-    todoFactory("Brush teeth", "11/01/22", "High", "Example2")
+  let exampleProject2 = projectFactory ('Example 2', [
+    todoFactory("Fix the sink", "11/01/22", "Low", "Example_2"),
+    todoFactory("Take kids to school", "11/02/22", "Medium", "Example_2"),
+    todoFactory("Brush teeth", "11/01/22", "High", "Example_2")
   ]);
   projects.push(exampleProject2);
 // else
