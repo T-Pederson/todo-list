@@ -1,6 +1,7 @@
 import { projects } from "./index";
 import { populateSelection } from "./populate-selection";
 import { todoFactory } from "./todo-factory";
+import { format } from 'date-fns';
 
 export function newTodo () {
   // Assign user input to variables
@@ -34,7 +35,8 @@ export function newTodo () {
   }
 
   // Use todo factory to create new todo
-  let newTodo = todoFactory(title.value, dueDate.value, priority, selectedProject.title);
+  let formattedDueDate = format(new Date(dueDate.value), 'MM/dd/yyyy');
+  let newTodo = todoFactory(title.value, formattedDueDate, priority, selectedProject.title);
 
   // Add todo to appropriate project
   selectedProject.todoList.push(newTodo);
