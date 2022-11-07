@@ -1,4 +1,4 @@
-import { projects } from "./index";
+import { projects } from "../index";
 import { populateSelection } from "./populate-selection";
 
 // Delete todo from appropriate project

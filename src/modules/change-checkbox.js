@@ -1,5 +1,5 @@
-import checkboxEmptySVG from "./images/checkboxempty.svg";
-import checkboxCheckedSVG from "./images/checkboxchecked.svg";
+import checkboxEmptySVG from "../images/checkboxempty.svg";
+import checkboxCheckedSVG from "../images/checkboxchecked.svg";
 
 export function changeCheckbox (selected) {
   let todoClasses = selected.target.parentNode.parentNode.classList;

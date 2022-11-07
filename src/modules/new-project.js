@@ -1,6 +1,6 @@
 import { populateProjects } from "./populate-projects";
 import { projectFactory } from "./project-factory";
-import { projects } from "./index";
+import { projects } from "../index";
 
 export function newProject () {
   const projectsList = document.querySelector(".projectsContainer");
@@ -27,6 +27,8 @@ export function newProject () {
     if (projectTitle != '' && !projectsArray.includes(projectTitle)) {
       const newProject = projectFactory(projectTitle, []);
       projects.push(newProject);
+      populateProjects();
+    } else {
       populateProjects();
     }
   });

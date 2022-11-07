@@ -1,4 +1,4 @@
-import { projects } from "./index";
+import { projects } from "../index";
 import { populateSelection } from "./populate-selection";
 import { todoFactory } from "./todo-factory";
 import { formatDate } from "./format-date";

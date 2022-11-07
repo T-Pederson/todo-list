@@ -1,5 +1,5 @@
 import { clearProjects } from "./clear-projects";
-import { projects } from "./index";
+import { projects } from "../index";
 import { populateSelection } from "./populate-selection";
 
 // Refresh the list of projects in the navbar

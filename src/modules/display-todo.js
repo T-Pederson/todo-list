@@ -1,6 +1,6 @@
-import checkboxEmptySVG from "./images/checkboxempty.svg";
-import editSVG from "./images/edit.svg";
-import deleteSVG from "./images/delete.svg"
+import checkboxEmptySVG from "../images/checkboxempty.svg";
+import editSVG from "../images/edit.svg";
+import deleteSVG from "../images/delete.svg"
 import { changeCheckbox } from "./change-checkbox";
 import { deleteTodo } from "./delete-todo";
 import { editTodo } from "./edit-todo";

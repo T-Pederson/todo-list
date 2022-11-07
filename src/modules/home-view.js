@@ -1,5 +1,5 @@
 import { displayTodo } from './display-todo';
-import { projects } from './index';
+import { projects } from '../index';
 import { removeProjectDelete } from './remove-project-delete';
 
 export function homeView () {

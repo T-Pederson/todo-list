@@ -1,6 +1,6 @@
 import { todoFactory } from './todo-factory';
 import { projectFactory } from './project-factory';
-import { projects } from './index';
+import { projects } from '../index';
 
 export function examples() {
   let exampleProject = projectFactory ('Example', [

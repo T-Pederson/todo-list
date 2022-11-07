@@ -1,5 +1,5 @@
-import checklistSVG from "./images/checklist.svg";
-import addSVG from "./images/add.svg";
+import checklistSVG from "../images/checklist.svg";
+import addSVG from "../images/add.svg";
 import { newProject } from "./new-project";
 
 export function loadSVGs () {

@@ -1,4 +1,4 @@
-import { projects } from "./index";
+import { projects } from "../index";
 import { formatDate } from "./format-date"
 import { populateSelection } from "./populate-selection";
 

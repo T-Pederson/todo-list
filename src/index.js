@@ -1,9 +1,9 @@
 import './styles.css';
-import { loadSVGs } from './load-SVGs';
-import { populateProjects } from './populate-projects';
-import { populateSelection } from './populate-selection';
-import { examples } from './examples';
-import { eventListeners } from './event-listeners';
+import { loadSVGs } from './modules/load-SVGs';
+import { populateProjects } from './modules/populate-projects';
+import { populateSelection } from './modules/populate-selection';
+import { examples } from './modules/examples';
+import { eventListeners } from './modules/event-listeners';
 
 export let projects = [];
 

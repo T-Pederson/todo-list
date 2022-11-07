@@ -1,7 +1,7 @@
-import { projects } from "./index";
+import { projects } from "../index";
 import { displayTodo } from "./display-todo";
-import addSVG from './images/add.svg';
-import deleteSVG from './images/delete.svg';
+import addSVG from '../images/add.svg';
+import deleteSVG from '../images/delete.svg';
 import { deleteProject } from './delete-project';
 import { displayModal } from "./display-modal";
 import { removeProjectDelete } from "./remove-project-delete";

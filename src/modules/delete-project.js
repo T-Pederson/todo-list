@@ -1,5 +1,5 @@
 import { populateProjects } from "./populate-projects";
-import { projects } from "./index";
+import { projects } from "../index";
 import { populateSelection } from "./populate-selection";
 
 export function deleteProject (project) {
