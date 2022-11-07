@@ -14,7 +14,7 @@ export function populateSelection (selection) {
   const projectsArray = Array.from(projectsList.children);
 
   // Find currently selected option in the event that a project or todo is deleted
-  if (selection == undefined || selection.target.innerText == "Cancel") {
+  if (selection == undefined) {
     for (let item in navbarArray) {
       if (navbarArray[item].classList.contains("selected")) {
         selection = navbarArray[item];

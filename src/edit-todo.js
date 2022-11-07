@@ -3,7 +3,7 @@ import { formatDate } from "./format-date"
 import { populateSelection } from "./populate-selection";
 
 // Edit a todo item
-export function editTodo (todo) {
+export function editTodo (todo) {  
   // Find project object that todo is associated with
   const projectTitle = todo.target.parentNode.parentNode.children[2].children[1].innerText;
   let project;
@@ -89,6 +89,8 @@ export function editTodo (todo) {
   buttonsContainer.appendChild(saveButton);
   const cancelButton = document.createElement("button");
   cancelButton.innerText = "Cancel";
-  cancelButton.addEventListener("click", populateSelection);
+  cancelButton.addEventListener("click", () => populateSelection());
   buttonsContainer.appendChild(cancelButton);
+
+  // Turn todo into a modal
 }
