@@ -26,7 +26,6 @@ export function populateSelection (selection) {
       }
     }
   } else if (selection.target != undefined) {
-    console.log(selection.target);
     selection = selection.target;
   }
 

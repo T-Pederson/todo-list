@@ -91,5 +91,4 @@ export function editTodo (todo) {
   cancelButton.innerText = "Cancel";
   cancelButton.addEventListener("click", populateSelection);
   buttonsContainer.appendChild(cancelButton);
-  
 }

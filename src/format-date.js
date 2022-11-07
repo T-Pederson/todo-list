@@ -1,6 +1,10 @@
 import { format } from 'date-fns';
 
-export function formatDate (unformattedDate) {
-  const formattedDate = format(new Date(unformattedDate.replace(/-/g, '/')), 'MM/dd/yyyy');
-  return formattedDate;
+export function formatDate (date) {
+  if (typeof date == "object") {
+    date = format(date, 'MM/dd/yyyy');
+  } else {
+    date = format(new Date(date.replace(/-/g, '/')), 'MM/dd/yyyy');
+  }
+  return date;
 }
