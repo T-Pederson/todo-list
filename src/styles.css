@@ -145,7 +145,8 @@ h1 {
 }
 
 .dueContainer,
-.priorityContainer {
+.priorityContainer,
+.projectContainer {
   display: grid;
   grid-template-columns: auto auto 1fr auto auto;
   gap: 6px;
@@ -163,6 +164,14 @@ h1 {
   color: black;
   scale: 105%;
   padding-left: 8px;
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 8px;
 }
 
 .modal {

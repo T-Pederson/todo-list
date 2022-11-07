@@ -3,6 +3,7 @@ import editSVG from "./images/edit.svg";
 import deleteSVG from "./images/delete.svg"
 import { changeCheckbox } from "./change-checkbox";
 import { deleteTodo } from "./delete-todo";
+import { editTodo } from "./edit-todo";
 
 const content = document.querySelector(".content");
 
@@ -23,7 +24,7 @@ export function displayTodo (todo) {
   let dueContainer = document.createElement("div");
   dueContainer.classList.add("dueContainer");
   todoNode.appendChild(dueContainer);
-
+  
   // Generate Due: text
   let dueText = document.createElement("p");
   dueText.innerText = "Due: ";
@@ -33,6 +34,22 @@ export function displayTodo (todo) {
   let dueDate = document.createElement("p");
   dueDate.innerText = todo.dueDate;
   dueContainer.appendChild(dueDate);
+
+  // Generate project container
+  let projectContainer = document.createElement("div");
+  projectContainer.classList.add("projectContainer");
+  todoNode.appendChild(projectContainer);
+
+  // Generate Project: text
+  let projectText = document.createElement("p");
+  projectText.innerText = "Project: "
+  projectContainer.appendChild(projectText);
+
+  // Generate project title
+  let projectTitle = document.createElement("p");
+  projectTitle.classList.add("projectTitle");
+  projectTitle.innerText = todo.project;
+  projectContainer.appendChild(projectTitle);
 
   // Generate priority container
   let priorityContainer = document.createElement("div");
@@ -62,6 +79,7 @@ export function displayTodo (todo) {
   editIcon.setAttribute("src", editSVG);
   editIcon.setAttribute("alt", "edit");
   editIcon.classList.add("edit");
+  editIcon.addEventListener("click", editTodo);
   priorityContainer.appendChild(editIcon);
 
   // Generate delete icon
