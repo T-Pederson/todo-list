@@ -27,6 +27,7 @@ export function newProject () {
     if (projectTitle != '' && !projectsArray.includes(projectTitle)) {
       const newProject = projectFactory(projectTitle, []);
       projects.push(newProject);
+      localStorage.setItem('projects', JSON.stringify(projects));
       populateProjects();
     } else {
       populateProjects();

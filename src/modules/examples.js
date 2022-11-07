@@ -9,10 +9,4 @@ export function examples() {
     todoFactory("Take a shower", "11/08/22", "High", "Example")
   ]);
   projects.push(exampleProject);
-  let exampleProject2 = projectFactory ('Example 2', [
-    todoFactory("Fix the sink", "11/12/22", "Low", "Example 2"),
-    todoFactory("Take kids to school", "11/13/22", "Medium", "Example 2"),
-    todoFactory("Brush teeth", "11/17/22", "High", "Example 2")
-  ]);
-  projects.push(exampleProject2);
 }

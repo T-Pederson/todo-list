@@ -41,6 +41,9 @@ export function newTodo () {
   // Add todo to appropriate project
   selectedProject.todoList.push(newTodo);
 
+  // Update local storage
+  localStorage.setItem('projects', JSON.stringify(projects));
+
   // Update content to display new todo
   populateSelection();
 
