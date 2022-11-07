@@ -92,5 +92,9 @@ export function editTodo (todo) {
   cancelButton.addEventListener("click", () => populateSelection());
   buttonsContainer.appendChild(cancelButton);
 
-  // Turn todo into a modal
+  // Turn off all edit button event listeners until the current todo edit is saved or cancelled
+  const edits = document.querySelectorAll(".edit");
+  for (let edit of edits) {
+    edit.removeEventListener("click", editTodo);
+  }
 }

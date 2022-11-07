@@ -16,19 +16,18 @@ export function newProject () {
   const titleInput = document.createElement("input");
   titleInput.setAttribute("type", "text");
   titleInput.setAttribute("name", "title");
+  titleInput.id = "projectName";
   projectsList.appendChild(titleInput);
   titleInput.focus();
 
   // Use project factory to create new project, add it to the projects array, and update the navbar
   // Don't allow user to use a blank or already existing title
-  titleInput.addEventListener("keydown", (key) => {
-    if (key.code == 'Enter') {
-      let projectTitle = titleInput.value;
-      if (projectTitle != '' && !projectsArray.includes(projectTitle)) {
-        const newProject = projectFactory(projectTitle, []);
-        projects.push(newProject);
-        populateProjects();
-      }
+  titleInput.addEventListener("blur", () => {
+    let projectTitle = titleInput.value;
+    if (projectTitle != '' && !projectsArray.includes(projectTitle)) {
+      const newProject = projectFactory(projectTitle, []);
+      projects.push(newProject);
+      populateProjects();
     }
   });
 }
