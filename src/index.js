@@ -7,14 +7,11 @@ import { eventListeners } from './event-listeners';
 
 export let projects = [];
 
-// if first time loading page
-  // generate example projects with example todos
+// if no local storage, generate example projects & todos
   examples();
 // else
   // generate projects from storage
-    // generate todos for each project in storage
-  // populate home page with list of projects and new project button
-  // add event listeners to week, month, each project, and new project buttons
+
 
   // Generate list of projects in navbar
   populateProjects();
