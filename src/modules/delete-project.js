@@ -10,6 +10,9 @@ export function deleteProject (project) {
     }
   }
 
+  // Update local storage
+  localStorage.setItem('projects', JSON.stringify(projects));
+
   // Update projects list in navbar
   populateSelection(document.querySelector(".home"));
   populateProjects();

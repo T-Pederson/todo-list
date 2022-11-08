@@ -8,5 +8,9 @@ export function deleteTodo (todo) {
       projects[project].todoList.splice(projects[project].todoList.indexOf(todo), 1);
     }
   }
+  
+  // Update local storage
+  localStorage.setItem('projects', JSON.stringify(projects));
+
   populateSelection();
 }
